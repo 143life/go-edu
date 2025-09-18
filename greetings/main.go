@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	"example.com/goroutines"
 	"example.com/hello"
@@ -26,7 +27,8 @@ func main() {
 	// If no error was returned, print the returned message
 	// to the console
 	fmt.Println(message)
-	//fmt.Println(os.Getenv("GOPATH"))
+	fmt.Println(os.Getenv("GOPATH"))
 
+	// Goroutines with preemptive scheduler
 	goroutines.StartGoroutines()
 }

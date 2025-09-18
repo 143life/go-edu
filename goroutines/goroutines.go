@@ -7,28 +7,30 @@ import (
 
 func StartGoroutines() {
 	// 001 example
-	go sleepyGopher()           // начало горутины
-	time.Sleep(4 * time.Second) // Ожидание храпа гофера
+	//go sleepyGopher()           // начало горутины
+	//time.Sleep(4 * time.Second) // Ожидание храпа гофера
 
 	// 002 example
-	for i := 0; i < 5; i++ {
-		go sleepyGopher(i)
-	}
-	time.Sleep(4 * time.Second)
+	//for i := 0; i < 5; i++ {
+	//	go sleepyGopher(i)
+	//}
+	//time.Sleep(4 * time.Second)
 
 	// 003 example
-	channel := make(chan int) // Делает канал для связи
-	for i := 0; i < 5; i++ {
-		go sleepyGopher(i, channel)
-	}
-	for i := 0; i < 5; i++ {
-		gopherID := <-channel // получает значение от канала
-		fmt.Println("gopher ", gopherID, "has finished sleeping")
-	}
+	//channel := make(chan int) // Делает канал для связи
+	//for i := 0; i < 5; i++ {
+	//	go sleepyGopher(i, channel)
+	//}
+	//for i := 0; i < 5; i++ {
+	//	gopherID := <-channel // получает значение от канала
+	//	fmt.Println("gopher ", gopherID, "has finished sleeping")
+	//}
 
 	// WaitGroup
 	// 004 example
-	hundredThereAndBackAgain()
+	//hundredThereAndBackAgain()
+	// 005 data race example
+	dataRace()
 } // здесь все горутины останавливаются
 
 // извращенно решаю проблему с отсутствием перегрузки методов
