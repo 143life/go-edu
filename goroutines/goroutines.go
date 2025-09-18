@@ -25,6 +25,10 @@ func StartGoroutines() {
 		gopherID := <-channel // получает значение от канала
 		fmt.Println("gopher ", gopherID, "has finished sleeping")
 	}
+
+	// WaitGroup
+	// 004 example
+	hundredThereAndBackAgain()
 } // здесь все горутины останавливаются
 
 // извращенно решаю проблему с отсутствием перегрузки методов
