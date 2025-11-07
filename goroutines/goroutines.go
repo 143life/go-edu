@@ -30,7 +30,10 @@ func StartGoroutines() {
 	// 004 example
 	//hundredThereAndBackAgain()
 	// 005 data race example
-	dataRace()
+	// dataRace()
+
+	// 006 Start stepik goroutines leraning
+	Start()
 } // здесь все горутины останавливаются
 
 // извращенно решаю проблему с отсутствием перегрузки методов
