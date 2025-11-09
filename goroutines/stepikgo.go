@@ -94,16 +94,13 @@ func generate(c chan rune) {
 	defer close(c)
 	for _, elem := range word {
 		c <- elem
-		//fmt.Println("Prodolzaem")
-		//fmt.Println(time.Since(start))
 	}
 }
 
 func receiveWord(c chan rune) time.Duration {
-	word := []rune{}
 	start := time.Now()
 	for r := range c {
-		word = append(word, r)
+		_ = r
 	}
 	duration := time.Since(start)
 	return duration

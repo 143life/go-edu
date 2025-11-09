@@ -33,7 +33,10 @@ func StartGoroutines() {
 	// dataRace()
 
 	// 006 Start stepik goroutines leraning
-	Start()
+	// Start()
+
+	// 007 Select-case construction
+	firstFibonacciNumbers()
 } // здесь все горутины останавливаются
 
 // извращенно решаю проблему с отсутствием перегрузки методов
